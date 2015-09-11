@@ -1,0 +1,65 @@
+.bgimg{
+       background:url("../images/bg01.jpg");
+       /*background-size: cover;       /* For flexibility */
+       }
+
+.game1 {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.ui-content {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  /*background:#fff;*/
+  background:url("../images/bg01.jpg");
+  
+}
+.box_area {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom:15px;
+}
+.box {
+  position: absolute;
+  z-index: 2;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 8px 0px #1F1B1B;
+  -webkit-box-shadow: inset 0px 0px 8px 0px #1F1B1B;
+  -moz-box-shadow: inset 0px 0px 8px 0px #1F1B1B;
+  -o-box-shadow: inset 0px 0px 8px 0px #1F1B1B;
+}
+
+.box_empty {
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  border: 1px solid #fff;
+}
+#tap_num,#play_time{
+  text-align:center;
+  padding:0;
+  margin:0;
+  font-size:24px;
+  font-weight: 700;
+  color:red;
+}
+#completed{
+  color:#f00;
+  text-align:center;
+  display:none;
+  padding:0;
+  margin:0;
+}
+
+.div_shadow
+{ 
+  box-shadow: 5px 5px 5px #333333; 
+  -webkit-box-shadow: 5px 5px 5px #333333; 
+  -moz-box-shadow: 5px 5px 5px #333333; 
+}
+

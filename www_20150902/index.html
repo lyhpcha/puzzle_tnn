@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/my.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <title>拼圖</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/game1.js"></script>
+</head>
+	
+<body>
+    <section id="home1" data-role="page" class="bgimg">
+	    <div data-role="header" data-position="fixed" data-theme="b" data-tap-toggle="false" id="header1">
+            <h3 id='home_title' >拼圖遊戲</h3>
+        </div> 
+		<div role="main" class="ui-content" id="home_main">
+		    <h1 id="puzzle_size" >請選擇拼圖的片數</h1>
+		    <input type="image" src="images/btn01.png" id="btn_3x3"  ></input>
+			<input type="button" id="btn_4x4"  value="4x4"></input>
+			<input type="button" id="btn_5x4"  value="5x4"></input>
+		</div>
+	    <div data-position="fixed" data-role="footer" data-theme="b" data-tap-toggle="false" style="padding:0; height:60px;">
+            <div class="ui-grid-c" style="height:100%; margin:0; padding:0">
+                <div class="ui-block-a" style="height:100%; width:25%;margin:0; padding:0;">
+                    <a id="btn_exit" class="ui-btn ui-btn-icon-top ui-icon-bars" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;"  data-transition="flip">離開</a>
+                </div>
+                <div class="ui-block-b" style="height:100%; width:25%;margin:0;padding:0;">
+                    <a href="#game1" id="btn_game1" data-direction="fade" class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">遊戲</a>
+                </div>
+                <div class="ui-block-b" style="height:100%; width:25%;margin:0;padding:0;">
+                    <!--<a href="#game1" id="btn_record"  class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">載入記錄</a> -->
+					<a  href="#game1" id="btn_record"  data-direction="fade" class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">載入記錄</a>
+                
+                </div>                
+                <div class="ui-block-c" style="height:100%;width:25%;">
+                    <a id="btn_test" class="ui-btn ui-icon-refresh ui-btn-icon-top" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">Test</a>
+                </div>
+            </div>
+        </div>
+	</section>
+	
+    <section id="game1" data-role="page" >
+        <!--<section data-role="header" data-position="fixed" data-theme="b" data-tap-toggle="false" id="boxheader">
+            <h3 id='aa' >九宮格拼圖遊戲</h3>
+        </section> -->
+			
+        <!-- 拼圖內容  -->
+        <div data-role="main" class="ui-content" id="game1_main">
+            <div id="box_area" class="box_area"></div>
+            <div id="tap_num">移動步數：<i>0</i> 步</div>
+            <div id="play_time">經過時間：<i>0</i> 秒</div>
+        </div>
+		
+        <div data-position="fixed" data-role="footer" data-theme="b" data-tap-toggle="false" style="padding:0; height:60px;">
+            <div class="ui-grid-c" style="height:100%; margin:0; padding:0">
+                <div class="ui-block-a" style="height:100%; width:25%;margin:0; padding:0;">
+                    <a href="#home1" id="btn_back1"  data-direction="fade" class="ui-btn ui-btn-icon-top ui-icon-bars" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;" >回主選單</a>
+                </div>
+                <div class="ui-block-b" style="height:100%; width:25%;margin:0;padding:0;">
+                    <a id="btn_play" class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">開始</a>
+                </div>   
+                <div class="ui-block-b" style="height:100%; width:25%;margin:0;padding:0;">
+                    <a id="btn_marker" class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">提示</a>
+                </div>  				
+                <div class="ui-block-c" style="height:100%;width:25%;">
+                    <a id="btn_restart" class="ui-btn ui-icon-refresh ui-btn-icon-top" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">重新開始</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>
+

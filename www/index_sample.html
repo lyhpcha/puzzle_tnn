@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <title>拼圖</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/game1.js"></script>
+</head>
+	
+<body>
+    <section id="game1" data-role="page" class="game1">
+        <section data-role="header" data-position="fixed" data-theme="b" data-tap-toggle="false" id="boxheader">
+            <h3 id='aa' >九宮格拼圖遊戲</h3>
+        </section>
+		
+        <!-- 拼圖內容  -->
+        <section data-role="main" class="ui-content">
+            <div id="box_area" class="box_area">
+                <div id="box1" class="box" data-box="1" data-check="1">1</div>
+                <div id="box2" class="box" data-box="2" data-check="2">2</div>
+                <div id="box3" class="box" data-box="3" data-check="3">3</div>
+                <div id="box4" class="box" data-box="4" data-check="4">4</div>
+                <div id="box5" class="box" data-box="5" data-check="5">5</div>
+                <div id="box6" class="box" data-box="6" data-check="6">6</div>
+                <div id="box7" class="box" data-box="7" data-check="7">7</div>
+                <div id="box8" class="box" data-box="8" data-check="8">8</div>
+                <div id="box9" class="box" data-box="9" data-check="9"></div>
+            </div>
+            <div id="tap_num" >你走了：<i>0</i> 步</div>
+            <div id="play_time">經過時間：<i>0</i> 秒</div>
+        </section>
+		
+        <section data-position="fixed" data-role="footer" data-theme="b" data-tap-toggle="false" style="padding:0; height:60px;">
+            <div class="ui-grid-c" style="height:100%; margin:0; padding:0">
+                <div class="ui-block-a" style="height:100%; width:34%;margin:0; padding:0;">
+                    <a id="btn_back" class="ui-btn ui-btn-icon-top ui-icon-bars" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;" href="#index" data-transition="flip">回主選單</a>
+                </div>
+                <div class="ui-block-b" style="height:100%; width:33%;margin:0;padding:0;">
+                    <a id="btn_play" class="ui-btn ui-btn-icon-top ui-icon-eye" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">開始</a>
+                </div>                
+                <div class="ui-block-c" style="height:100%;width:33%;">
+                    <a id="btn_restart" class="ui-btn ui-icon-refresh ui-btn-icon-top" style="height:100%; width:100%; padding:0; line-height:80px; margin:0;">重新開始</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+</body>
+
+</html>
+
